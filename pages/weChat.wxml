@@ -1,0 +1,3 @@
+<view class="weChat">
+	<button style="width:100%" open-type='contact' bindcontact="handleContact"><image src="/statics/images/icon-WeChat.png"></image></button>
+</view>

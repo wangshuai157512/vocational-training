@@ -1,0 +1,12 @@
+<view class="shareBody" wx:if="{{shareList.length>0}}">
+    <view class="shareList {{index ===shareList.length-1?'no-border':''}}" wx:for="{{shareList}}" wx:key="id">
+        <view class='share-item'><image class="" src="{{item.avatarUrl}}" mode="widthFix"></image><text>{{item.nickname}}</text></view>
+        <view>{{item.createTime}} 加入</view>
+    </view>
+</view>
+<emptyPage wx:else 
+        img="../../statics/images/no-materials.png"
+        title="暂无客户授权，快去转发海报吧~"
+        description=""
+        >
+</emptyPage>

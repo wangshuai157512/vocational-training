@@ -1,0 +1,96 @@
+<view class="modal" wx:if="{{isModal}}" bind:tap="closeModal">
+    <view class="phone">
+        <view class="phoneTitle">为了同步您的查看权限，请先登录</view>
+        <view class="phoneImg"><image class="" src="../../statics/images/phone.png" mode="widthFix"></image></view>
+        <view class="phoneBtn"><button class="" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">一键登录</button></view>
+    </view>
+</view>
+<view class="modal" wx:if="{{isRule}}">
+    <view class="rule">
+        <view class="ruleTitle">活动规则</view>
+        <view class="closeRule" bind:tap="closeRule"><image class="" src="../../statics/images/closeRule.png" mode="widthFix"></image></view>
+        <view class="ruleContent">
+            <view>1.拼团成功后如何查看资料：返回到首页，点击“我的”-“我的资料包”查看；团长及队友均可领取资料包；</view>
+            <view>2.拼团成功定义：自开团之时起，24小时内邀请1位好友参团即拼团成功；</view>
+            <view>3.拼团失败定义：自开团之时起，超出24小时没有集齐人数则拼团失败；</view>
+            <view>4.如何查看拼团进度：您可以在“我的”-“我的拼团”中查看，如拼团失败可重新发起拼团；</view>
+            <view>5.职业培训课保留法律范围内允许的对活动的解释权。</view>
+        </view>
+    </view>
+</view>
+<view class="group_index" style="top:{{indexTop}}px" bind:tap="goIndex"><image class="" src="../../statics/images/go-home.png" mode="widthFix"></image></view>
+<view class="group_body">
+    <view class="group_bg"></view>
+    <view class="group_rule" bind:tap="openRule">活动规则</view>
+    <view class="group_content">
+        <view class="group_content_title">{{materialDetail[0].materialName}}</view>
+        <view class="group_content_weal_img"  >
+            <view wx:for="{{materialDetail[0].tag}}" wx:key="index">
+                <image class="" src="../../statics/images/pdf.png" mode="widthFix"></image>
+                <view>{{item}}</view>  
+            </view>
+        </view>
+        <view class="lineImg"><image src="../../statics/images/line.png" mode="widthFix"></image></view>
+         <!-- 开团 -->
+       <view class="change_content"  wx:if="{{squadList.length < 2 && squadState === 2 && (isCreate || isEnter)}}">
+           <view class="countdown">距结束 <span>{{hour}}</span> : <span>{{minute}}</span> : <span>{{second}}</span></view>
+            <view class="explain">还差<span style="color : red">1</span>人即可开启资料包，赶紧邀请好友吧</view>
+        </view>
+         <!-- 参团 -->
+       <view class="change_content"  wx:if="{{!isCreate && !isEnter && squadList.length < 2 && squadState !== 0}}">
+           <view class="countdown">距结束 <span>{{hour}}</span> : <span>{{minute}}</span> : <span>{{second}}</span></view>
+            <view class="explain">就差你一人啦，<span style="color : red">立即参团</span>即可开启神秘资料包</view>
+        </view>
+         <!-- 组团成功 -->
+       <view class="change_content" wx:if="{{squadList.length === 2 && (isCreate || isEnter) }}">
+            <view class="countdown">组团成功</view>
+            <view class="explain">恭喜你，资料包已成功开启，快去学习吧</view>
+        </view>
+         <!-- 组团失败 -->
+       <view class="change_content" wx:if="{{squadState === 0}}">
+            <view class="countdown">此团已过期</view>
+            <view class="explain">不要灰心，你可以再次<text>发起拼团</text>哦</view>
+        </view>
+         <!-- 组团已满 -->
+       <view class="change_content" wx:if="{{!isCreate && !isEnter && squadList.length === 2}}">
+            <view class="countdown">此团已满</view>
+            <view class="explain">晚了一步，你可以<text>发起拼团</text>哦</view>
+        </view>
+        
+        <view class="group_people">
+            <view class="group_people_every" wx:for="{{2}}" wx:key="index">
+                <view class="group_people_Img"><image class="" src="{{squadList[index].avatarUrl?squadList[index].avatarUrl : '../../statics/images/waitShare.png'}}"></image><view class="commander" wx:if="{{index===0}}">团长</view></view>
+                <view class="nickname">{{squadList[index].nickname?squadList[index].nickname : '待邀请'}}</view>
+            </view>
+            
+        </view>
+        
+        <view class="group_State">
+           <button class="" open-type="share" bindtap="msg" wx:if="{{squadList.length < 2 && squadState === 2 && (isCreate || isEnter)}}">立即邀群好友</button> 
+           <button class="" bindtap="addGroup" wx:if="{{!isCreate && !isEnter && squadList.length < 2 && squadState !== 0}}">立即参团</button>
+           <button class="" wx:if="{{squadList.length === 2 && (isCreate || isEnter) }}"bind:tap="lookMaterial">查看资料</button>
+           <button class="" bindtap="createGroup" wx:if="{{squadState === 0}}">发起拼团</button>
+           <button class="" bindtap="createGroup" wx:if="{{!isCreate && !isEnter && squadList.length === 2}}">发起拼团</button>
+            <view class="group_State authorize" wx:if="{{!userInfo.nickname || !userInfo.phone}}">
+                <button class="" wx:if="{{!userInfo.nickname}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+                <button class="" wx:if="{{userInfo.nickname && !userInfo.phone}}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"></button>
+            </view>
+        </view>
+
+        <view class="remind" wx:if="{{squadList.length < 2 && squadState === 2 && (isCreate || isEnter)}}">分享到5个微信群，成功率高达 98%</view>
+
+    </view>
+    
+    <!-- <image class="" src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJg0W7IVzQ5gPbLouuoeI4VTEFRXKNFJIVFx4SWTWwL5affdJ2s2ShKIxRJIUDVRKiahZD6emQqq4A/132" style="border-radius:50%; width:50px;height:50px"></image> -->
+    <view>
+       
+       <!-- <view class="group_State" wx:else>
+           <button class="" open-type="share" wx:if="{{squadList.length < 2}}">邀请好友</button> 
+           <button class=""  wx:else>查看资料</button> 
+        </view>  -->
+        
+          <!-- <button class="" bindtap="addGroup">加入队伍</button>  -->
+        <!-- <button class="" bindtap="createGroup">此团已满创建新团</button>  -->
+    </view>
+      
+</view> 

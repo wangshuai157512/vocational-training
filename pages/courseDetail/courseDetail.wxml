@@ -1,0 +1,58 @@
+<!--项目详情-->
+<view class="modal" wx:if="{{isWealModal}}">
+    <view class="weal">
+        <image class="" src="../../statics/images/wealModal.png" mode="widthFix"></image>
+        <view class="close" bindtap="handClose"><image class="" src="../../statics/images/close-weal.png" mode="widthFix"></image></view>
+        <view class="wealTitle">{{courseDetail.name}}内部资料</view>
+        <view class="wealFree">免费领</view>
+        <view class="wealBtn">
+            <button class="" bindtap="getInformation"></button>
+        </view>
+    </view>
+</view>
+<view class="container {{isIpx ? 'ipx_button' : ''}}">
+    <view class="class-header">
+    	<view class="vBlock">
+	        <image src="{{normalUrl}}{{courseDetail.videoImg}}"></image>
+	        <image class="v" src="/statics/images/v_Play.png"></image>
+	    </view>
+        <video 
+          id="xcVideo" 
+          src="{{courseDetail.videoUrl}}" 
+          binderror="videoErrorCallback" 
+          show-center-play-btn='true' 
+          show-play-btn="false" 
+          controls="true" 
+          object-fit='fill' 
+          poster='{{normalUrl}}{{courseDetail.videoImg}}'
+        ></video>
+    </view>
+    <rich-text class="class-des">
+    	<ul class="clearfix">
+    		<li wx:for="{{courseDetail.classTag}}" wx:key="key"><image src="/statics/images/t.png"></image>{{item.name}}</li>
+    	</ul>
+    </rich-text>
+
+    <view class="class_category">
+    	<view class="title"><image src="/statics/images/icon-class.png"></image>相关班型</view>
+    	<view class="page-class" wx:for="{{courseDetail.courseList}}" wx:key="key">
+            <view class="h2">
+                <i class="org" wx:if="{{item.courseType.name=='笔+面'}}">{{item.courseType.name}}</i><i class="blue" wx:if="{{item.courseType.name=='笔试课'}}">{{item.courseType.name}}</i><i class="green" wx:if="{{item.courseType.name=='面试课'}}">{{item.courseType.name}}</i>{{item.name}}
+            </view>
+            <rich-text>
+                <ul class="clearfix">
+                    <li wx:for="{{item.sloganList}}" wx:key="key" wx:for-item="slogan">{{slogan.name}}</li>
+                </ul>
+            </rich-text>
+            <view class="clearfix">
+                <text class="tag" wx:for="{{item.tagList}}" wx:key="key" wx:for-item="tag">{{tag.name}}</text>
+                <text class="price">¥{{item.price}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="wealBottomBtn" bindtap="getInformation"><image src="/statics/images/weal.png"></image></view>
+</view>
+
+
+<!-- <include src="/pages/weChat.wxml"/> -->
+<tabbar ></tabbar>

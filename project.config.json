@@ -1,0 +1,293 @@
+{
+	"description": "职业培训课",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.11.0",
+	"appid": "wxfcdd2444f6c95908",
+	"projectname": "%E8%81%8C%E4%B8%9A%E5%9F%B9%E8%AE%AD%E8%AF%BE",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "pages/group/group",
+					"pathName": "pages/group/group",
+					"query": "shareUserId=null&classId=3&squadId=441&isShare=true",
+					"scene": 1007
+				},
+				{
+					"id": -1,
+					"name": "pages/wealMaterial/wealMaterial",
+					"pathName": "pages/wealMaterial/wealMaterial",
+					"query": "squadId=155&classId=4&isShare=true",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wealMaterial/wealMaterial",
+					"pathName": "pages/wealMaterial/wealMaterial",
+					"query": "squadId=155&classId=4&isShare=true",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/materials/materials",
+					"pathName": "pages/materials/materials",
+					"query": "squadId=155&classId=4&isShare=true",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my/my",
+					"pathName": "pages/my/my",
+					"query": "squadId=155&classId=4&isShare=true",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myGroup/myGroup",
+					"pathName": "pages/myGroup/myGroup",
+					"query": "squadId=155&classId=4&isShare=true",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myGroup/myGroup",
+					"pathName": "pages/myGroup/myGroup",
+					"query": "squadId=155&classId=4&isShare=true",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myShare/myShare",
+					"pathName": "pages/myShare/myShare",
+					"query": "squadId=155&classId=4&isShare=true",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/teacherIndex/teacherIndex",
+					"pathName": "pages/teacherIndex/teacherIndex",
+					"query": "squadId=155&classId=4&isShare=true",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/teacherName/teacherName",
+					"pathName": "pages/teacherName/teacherName",
+					"query": "squadId=155&classId=4&isShare=true",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userCode/userCode",
+					"pathName": "pages/userCode/userCode",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userCode/userCode",
+					"pathName": "pages/userCode/userCode",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userCode/userCode",
+					"pathName": "pages/userCode/userCode",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wealMaterial/wealMaterial",
+					"pathName": "pages/wealMaterial/wealMaterial",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my/my",
+					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wealMaterial/wealMaterial",
+					"pathName": "pages/wealMaterial/wealMaterial",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/group/group",
+					"pathName": "pages/group/group",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/group/group",
+					"pathName": "pages/group/group",
+					"query": "squadId=221&classId=5&isPage=true",
+					"scene": 1017
+				},
+				{
+					"id": -1,
+					"name": "pages/myMaterials/myMaterials",
+					"pathName": "pages/myMaterials/myMaterials",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myGroup/myGroup",
+					"pathName": "pages/myGroup/myGroup",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/wealMaterial/wealMaterial",
+					"pathName": "pages/wealMaterial/wealMaterial",
+					"query": "shareUserId=250&classId=5&isShare=true&squadId=320",
+					"scene": 1007
+				},
+				{
+					"id": -1,
+					"name": "pages/group/group",
+					"pathName": "pages/group/group",
+					"query": "shareUserId=251&classId=5&isShare=true&squadId=320",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "shareUserId=251&classId=5&isShare=true&squadId=320",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/group/group",
+					"pathName": "pages/group/group",
+					"query": "shareUserId=251&classId=5&isShare=true&squadId=320",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/group/group",
+					"pathName": "pages/group/group",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/teacherName/teacherName",
+					"pathName": "pages/teacherName/teacherName",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myGroup/myGroup",
+					"pathName": "pages/myGroup/myGroup",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/group/group",
+					"pathName": "pages/group/group",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myGroup/myGroup",
+					"pathName": "pages/myGroup/myGroup",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my/my",
+					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/teacherName/teacherName",
+					"pathName": "pages/teacherName/teacherName",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/group/group",
+					"pathName": "pages/group/group",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

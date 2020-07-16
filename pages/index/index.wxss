@@ -1,0 +1,81 @@
+/**index.wxss**/
+.container{background:#ffffff;padding-bottom: 0!important;}
+
+.page-swiper{width:690rpx;height:280rpx;margin:20rpx 30rpx 30rpx 30rpx;}
+
+.page-swiper swiper-item{position:relative;}
+.green{box-shadow:0px 25px 50px -10px rgba(0,204,136,0.25);}
+.red{box-shadow:0px 25px 50px -10px rgba(214, 18, 4, 0.25);}
+.page-swiper image,.page-swiper swiper{width:690rpx;height:280rpx;display: block;}
+.page-swiper swiper navigator{background:rgba(255,0,0,0.2);position:absolute;width:100%;height:100%;display:block;left:0;top:0}
+
+
+.project{width:690rpx;height:auto;margin:20rpx 30rpx 15rpx 30rpx;}
+.project .title{font-size:40rpx;font-family:PingFang-SC-Bold,PingFang-SC;font-weight:bold;color:rgba(17,25,21,1);line-height:40rpx;margin:10rpx 0 20rpx 0;}
+.project .title image{width:40rpx;height:40rpx;margin-right:10rpx;position:relative;top:8rpx;}
+.project .project-block{margin:15rpx 0;position:relative;}
+
+.project .project-block image{width:690rpx;height:240rpx;}
+.project .project-block>rich-text{position:absolute;background:rgba(255,0,0,0);padding:55rpx 30rpx 10rpx 240rpx;box-sizing: border-box;width:100%;height:100%;left:0;top:0;color:#ffffff;}
+.project .project-block>rich-text h1{font-size:34rpx;width:100%; font-family:PingFangSC-Medium,PingFang SC;font-weight:500;color:rgba(255,255,255,1);line-height:55rpx;letter-spacing:1rpx;}
+.project .project-block>rich-text ul{margin:0;padding:0;width:100%;}
+.project .project-block>rich-text ul li{width:45%;margin:0rpx 0 0rpx 0;width:100%; box-sizing: border-box; float:left; font-size:24rpx;font-family:PingFangSC-Regular,PingFang SC;font-weight:400;color:rgba(255,255,255,0.75);line-height:30rpx;padding:5rpx 0}
+.project .project-block>rich-text ul li image{width:18rpx;height:18rpx;margin-right:10rpx;}
+.project .project-block>rich-text button.Audi{position:absolute;right:20rpx;top:50%;-webkit-transform: translateY(-10%);font-family:PingFangSC-Regular,PingFang SC; width:120rpx;height:56rpx;padding:0; background:linear-gradient(90deg,rgba(185,142,81,1) 0%,rgba(237,187,114,1) 100%);border-radius:30rpx;text-align:center;line-height:56rpx;color:#ffffff;font-size:28rpx;}
+.project .project-block .Class_show_btn{position:absolute;width:100%;height:100%;left:0;top:0;background:rgba(255,0,0,0);}
+.project .project-block .Class_show_btn button{background:rgba(255,255,0,0);width:100%;height:100%;}
+
+.project .project-other{padding:30rpx 0;position:relative;border-bottom:0.3px solid #E6E7EB;}
+.project .project-other:last-child{border-bottom:0}
+.project .project-other .project-Img{width:148rpx;height:148rpx;display:block;}
+.project .project-other .project-catetype{position:absolute;left:0px;top:0rpx;box-sizing: border-box;width:100%;height:100%;padding:30rpx 0rpx 30rpx 180rpx;}
+.project .project-other .project-catetype>rich-text{background:rgba(255,0,0,0);box-sizing: border-box;width:100%;height:100%;display:block;}
+.project .project-other .project-catetype>rich-text ul{padding:0;margin:0}
+.project .project-other .project-catetype>rich-text ul li{float:left;position:relative; margin-right:25rpx;padding:5rpx 0 5rpx 15rpx; font-size:26rpx;font-family:PingFangSC-Regular,PingFang SC;font-weight:400;color:rgba(96,101,108,1);line-height:40rpx;}
+
+.project .project-other .project-catetype>rich-text ul li::after{content:" ";width:6rpx;height:6rpx;background:#B8C0CC;background-size:100%;display: inline-block;position: absolute;top:50%;left:0;float:left;margin-top:-3rpx;}
+
+.project .project-other:nth-child(3) .project-catetype>rich-text{padding-top:50rpx;}
+.project .project-other:nth-child(5) .project-catetype>rich-text{padding-top:30rpx;}
+
+.project .project-other .Class_show_btn{position:absolute;width:100%;height:100%;left:0;top:0;background:rgba(255,0,0,0);}
+.project .project-other .Class_show_btn button{background:rgba(255,255,0,0);width:100%;height:100%;}
+.create_code {width: 360rpx;height: 80rpx;border-radius: 10rpx;margin: 40rpx;background-color: bisque;position: relative;}
+.create_code button {width: 100%;height: 100%;background-color: bisque;}
+.create_code .info {position: absolute;top: 0;left: 0;z-index: 10;background-color: transparent;}
+
+.collection-box{
+    position: fixed;
+    top: 14rpx;
+    right: 48px;
+    z-index: 999;
+    background: rgba(0,0,0,.5);
+    width: 200px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+  }
+  .collection-box .collection-text{
+    color: #fff;
+    font-size: 12px;
+  }
+  .collection-box image {
+    width: 18px;
+    height: 18px;
+  }
+  .collection-box:after {
+    display:block;
+    content:'';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid rgba(0,0,0,0.5);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    top:-14px;
+    right: 36rpx;
+    transform: translateX(-50%);
+  }

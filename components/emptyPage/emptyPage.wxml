@@ -1,0 +1,7 @@
+<view>
+    <view class="materialsImg"><image class="" src="{{img}}" mode="widthFix"></image></view>
+    <view class="no-materials">
+        <view >{{title}}</view>
+        <view >{{description}}</view>
+    </view>
+</view>

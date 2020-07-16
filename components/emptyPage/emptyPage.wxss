@@ -1,0 +1,33 @@
+page {
+  background:rgba(245,246,247,1);
+  width: 100%;
+  font-family:PingFangSC-Medium,PingFang SC;
+  position: relative;
+}
+
+.materialsImg {
+  width: 500rpx;
+  height: 260rpx;
+  position: absolute;
+  top: 232rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.materialsImg image{
+  width: 100%;
+  height: 100%;
+}
+.no-materials {
+  width: 100%;
+  height: 88rpx;
+  font-size:28rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(96,101,108,0.6);
+  line-height:44rpx;
+  position: absolute;
+  top: 510rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}

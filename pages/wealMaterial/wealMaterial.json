@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "福利资料",
+  "usingComponents": {
+    "tabbar" : "../../custom-tab-bar/index"
+  }
+}

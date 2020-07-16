@@ -1,0 +1,47 @@
+.container{padding:0rpx;padding-bottom: 100rpx;background:#F5F6F7;height: 100%;display: flex;flex-direction: column;}
+page{background:#F5F6F7;}
+.class-header,.class-header .vBlock{width:750rpx;height:422rpx;position:relative;}
+.class-header .vBlock image{width:100%;height:100%;display:block;}
+.class-header .vBlock{position:relative;}
+.class-header .vBlock .v{width:100rpx;height:100rpx;position:absolute;left:50%;top:50%;margin:-50rpx 0 0 -50rpx;}
+.class-header video{width:750rpx;height:422rpx;position:absolute;left:0;top:0}
+.class-des{width:750rpx;height:128rpx;background:url(https://xxzx.chinaedu.net/wx/img/1588224047660.jpg) center center no-repeat;background-size:cover;box-sizing: border-box;padding:20rpx 30rpx;}
+.class-des ul{margin:0;padding:0;width:100%;}
+.class-des ul li{width:50%;margin:0rpx 0 0rpx 0;box-sizing: border-box; float:left; font-size:27rpx;font-family:PingFangSC-Regular,PingFang SC;font-weight:400;color:rgba(255,255,255,0.75);line-height:38rpx;padding:4rpx 0}
+.class-des ul li image{width:26rpx;height:26rpx;margin-right:10rpx;position:relative;top:4rpx;}
+
+
+.class_category{padding:30rpx 30rpx 10rpx 30rpx;width:100%;height:auto;box-sizing: border-box;margin-bottom:16rpx;}
+.class_category .title{width:100%; font-size:40rpx;font-family:PingFang-SC-Bold,PingFang-SC;font-weight:bold;color:rgba(17,25,21,1);line-height:40rpx;margin:10rpx 0 30rpx 0;}
+.class_category .title image{width:40rpx;height:40rpx;margin-right:10rpx;position:relative;top:6rpx;}
+
+
+.class_category .page-class{position:relative;background:#ffffff;border-radius:8px;padding:30rpx 30rpx 30rpx 30rpx;box-sizing: border-box;margin:12rpx 0;display:inline-block;width:100%;}
+.class_category .page-class:last-child{border-bottom:0}
+.class_category .page-class .h2{width:100%;display:block;float:left;margin:5rpx 0; font-size:34rpx;font-family:PingFangSC-Medium,PingFang SC;font-weight:bold;color:#2E3033;line-height:50rpx; }
+.class_category .page-class .h2 i{font-style:inherit;line-height:40rpx;height:40rpx;border-radius:20rpx 0 20rpx 20rpx;padding:0px 15rpx;margin-right:10rpx;margin-top:5rpx; font-size:22rpx;color:#ffffff;display:inline-block;float:left;}
+.class_category .page-class .h2 i.org{background:#FF8800;}
+.class_category .page-class .h2 i.blue{background:#1873F1;}
+.class_category .page-class .h2 i.green{background:#00B35A;}
+
+
+
+.class_category .page-class rich-text{width:100%;display:block;margin:15rpx 0 20rpx 0;}
+.class_category .page-class rich-text ul{padding:0;margin:0;width:100%;display:block;}
+.class_category .page-class rich-text ul li{float:left;position:relative;width:50%;box-sizing: border-box;padding:5rpx 0 5rpx 15rpx; font-size:24rpx;font-family:PingFangSC-Regular,PingFang SC;font-weight:400;color:#959CA6;line-height:35rpx;}
+.class_category .page-class rich-text ul li::after{content:" ";width:6rpx;height:6rpx;background:#B8C0CC;background-size:100%;display: inline-block;position: absolute;top:18rpx;left:0;float:left;}
+.class_category .page-class>view{width:100%;display:block;}
+.class_category .page-class>view .price{float:right;font-size:36rpx;font-family:PingFang-SC-Bold,PingFang-SC;font-weight:bold;color:rgba(255,106,0,1);line-height:40rpx;}
+.class_category .page-class>view .tag{background:rgba(0,166,28,0.1);height:32rpx;padding:0px 15rpx;margin-top:6rpx;margin-right:10rpx; border-radius:16px;float:left;font-size:20rpx;font-family:PingFang-SC-Medium,PingFang-SC;font-weight:500;color:rgba(0,179,90,1);line-height:28rpx;margin-right:10rpx;}
+
+.modal {position: fixed;top: 0;bottom: 0;left: 0;right: 0;height:100%;background: rgba(0,0,0,0.5);display: flex;justify-content: center;align-items: center; z-index: 3;}
+.weal {width: 570rpx;height: 640rpx;position: relative;z-index: 4;}
+.weal image{width: 100%;height: 100%;}
+.weal .close{font-size: 30rpx;position: absolute;top: 5rpx;right: 0;color: #fff;width: 48rpx;height: 48rpx;}
+.weal .close image{width: 100%;height: 100%;}
+.weal .wealTitle{font-size: 46rpx;font-family: FZLTHJW--GB1-0,FZLTHJW--GB1;color:#804A00;position: absolute;top: 53rpx;left: 0;width: 100%;text-align: center;}
+.weal .wealFree{font-size: 46rpx;font-family: FZLTHJW--GB1-0,FZLTHJW--GB1;color: #804A00;position: absolute;top: 120rpx;left: 210rpx}
+.weal .wealBtn button{width: 430rpx;height: 88rpx;line-height: 88rpx;text-align: center;font-size: 28rpx;padding: 0; border-radius: 49rpx;color:#4D361F;font-size: 36rpx;font-weight: 550;font-family:PingFangSC-Medium,PingFang SC; background:transparent;position: absolute;left: 70rpx;bottom: 42rpx;z-index: 5;}
+.wealBottomBtn{position:fixed;right:25rpx;bottom:150rpx;width:150rpx;height:120rpx;border-radius: 50%;}
+.wealBottomBtn image{width: 100%;height: 100%;}
+

@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/courseDetail/courseDetail",
+    "pages/projectDetail/projectDetail",
+    "pages/apply/apply",
+    "pages/logs/logs",
+    "pages/myShare/myShare",
+    "pages/userCode/userCode",
+    "pages/materials/materials",
+    "pages/myMaterials/myMaterials",
+    "pages/wealMaterial/wealMaterial",
+    "pages/group/group",
+    "pages/myGroup/myGroup",
+    "pages/my/my",
+    "pages/teacherIndex/teacherIndex",
+    "pages/teacherName/teacherName"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "职业培训课",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#959CA6",
+    "selectedColor": "#00806A",
+    "list": [{
+      "selectedIconPath": "statics/images/home_active.png",
+      "iconPath": "statics/images/home_normal.png",
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    
+    }, {
+      "selectedIconPath": "statics/images/weal_active.png",
+      "iconPath": "statics/images/weal_normal.png",
+      "pagePath": "pages/materials/materials",
+      "text": "资料福利"
+    }, {
+      "selectedIconPath": "statics/images/my_active.png",
+      "iconPath": "statics/images/my_normal.png",
+      "pagePath": "pages/my/my",
+      "text": "我的"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

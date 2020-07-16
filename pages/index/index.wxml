@@ -1,0 +1,65 @@
+<!--index.wxml-->
+<view class="container">
+  <view>
+      <!-- <view class="create_code" >
+        <button bindtap="teacherIndex">教师启动页</button>
+      </view> -->
+      <!-- <view class="create_code" >
+        <button bindtap="msg">订阅消息</button>
+      </view> -->
+  </view>
+  <view class="collection-box" wx:if="{{cancel}}">
+    <view class="sanjiao"></view>
+    <text class="collection-text">添加到我的小程序，随时刷考点</text>
+    <image src="/statics/images/close2.png" bindtap="handleCancel"></image>
+  </view>
+  <view class="page-swiper swiper">
+    <swiper autoplay="false" interval="5000" duration="500" class="{{currentSwiper==0? 'green':''}} {{currentSwiper==1? 'red':''}}" circular='true' current="{{currentSwiper}}" bindchange="swiperChange">
+      <block>
+        <swiper-item>
+          <view class="swiper-item swiperSlide01" bindtap="linkTo"><image src="/statics/images/banner.png"></image></view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="project">
+      <view class="title"><image src="/statics/images/icon-hot.png"></image>热门项目</view>
+
+
+      <view class="project-block" wx:for="{{HotClassList}}"  wx:for-item="item" wx:key="id"  bindtap="handleHotClass" data-couseid='{{item.id}}'>
+          <image src="{{normalUrl}}{{item.bgcImg}}"></image>
+          <rich-text>
+            <h1>{{item.name}}</h1>
+            <ul wx:for="{{item.tag}}" wx:key="id" wx:if="{{index<3}}">
+                <li><image src="/statics/images/icon_t.png"></image>{{item.name}}</li>
+            </ul>
+            <button class="Audi">试听</button>
+          </rich-text>
+          <!-- <view wx:if="{{!userInfo.nickname}}" class="Class_show_btn">
+              <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+          </view> -->
+      </view>
+
+  </view>
+
+  <view class="project">
+      <view class="title"><image src="/statics/images/icon-other.png"></image>其它项目</view>
+
+      <view class="project-other" wx:for="{{OtherProjectList}}" wx:for-item="item" wx:key="id" bindtap="handleOtherClass" data-couseid='{{item.id}}'>
+          <image class="project-Img" src="{{normalUrl}}{{item.img}}"></image>
+          <view class="project-catetype">
+            <rich-text>
+              <ul wx:for="{{item.classList}}" wx:key="id">
+                  <li>{{item.name}}</li>
+              </ul>
+            </rich-text>
+          </view>
+          <view wx:if="{{!userInfo.nickname}}" class="Class_show_btn">
+              <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+          </view>
+      </view>
+
+  </view>
+
+</view>
+<include src="/pages/weChat.wxml"/>

@@ -1,0 +1,23 @@
+<!--项目-->
+<view class="container {{isIpx ? 'ipx_button' : ''}}">
+    <view class="project-header">
+        <image src="{{normalUrl}}{{projectDetail.banner_img}}"></image>
+    </view>
+    <view class="class_category" wx:for="{{projectDetail.classList}}" wx:key="key">
+        <view class="title"><image src="/statics/images/icon-class.png"></image>{{item.name}}</view>
+        <view class="page-class" wx:for="{{item.courseList}}"  wx:key="key" wx:for-item="cItem">
+            <text class="h2">{{cItem.name}}</text>
+            <rich-text>
+                <ul class="clearfix">
+                    <li wx:for="{{cItem.sloganList}}"  wx:key="key" wx:for-item="sItem">{{sItem.name}}</li>
+                </ul>
+            </rich-text>
+            <view class="clearfix">
+                <text class="tag" wx:for="{{cItem.tagList}}" wx:key="key" wx:for-item="tag">{{tag.name}}</text>
+                <text class="price">￥{{cItem.price}}</text>
+            </view>
+        </view>
+    </view>
+</view>
+<include src="/pages/weChat.wxml"/>
+<tabbar ></tabbar>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "资料包",
+  "usingComponents": {
+    "tabbar" : "../../custom-tab-bar/index"
+  }
+}

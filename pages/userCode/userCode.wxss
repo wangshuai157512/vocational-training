@@ -1,0 +1,23 @@
+/* .container{padding:0rpx;padding-bottom: 100rpx;background:#F5F6F7;height: 100%;display: flex;flex-direction: column;} */
+page{background:rgba(247,249,250,1);height: 100%;width: 750rpx; padding: 44rpx 35rpx 142rpx 35rpx;box-sizing: border-box;}
+.code_body {width: 680rpx;height: 1020rpx; 
+    /* background-image: url('https://xxzx.chinaedu.net/wx/img/1594015982489.png'); */
+    background-size: cover; background-repeat: no-repeat; position: relative;}
+.codeImg {width: 140rpx;height: 140rpx;position: absolute;left: 476rpx;top: 812rpx;}
+.tem{width: 36rpx;height: 36rpx;position: absolute;left: 486rpx;top: 832rpx;z-index: 100;}
+canvas {
+    position: absolute;left: 50%;
+    transform: translateX(-50%);
+    top: 0;width: 340px;height: 510px;
+    /* border-radius: 30px; */
+
+}
+.savePhoto {position: fixed;left: 0;bottom: 0;width: 750rpx;height: 98rpx;line-height: 98rpx;text-align: center;font-size: 36rpx; color:#fff ;font-family:PingFangSC-Medium,PingFang SC;font-weight:500; background:linear-gradient(270deg,rgba(242,89,12,1) 0%,rgba(255,114,13,1) 100%);z-index: 100;}
+.bottomImg {
+    width: 40rpx;
+    height: 40rpx;
+    position: fixed;
+    left: 214rpx;
+    bottom: 28rpx;
+    z-index: 101
+}

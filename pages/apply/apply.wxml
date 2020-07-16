@@ -1,0 +1,50 @@
+<!--我要报名-->
+<view class="container {{isIpx ? 'ipx_button' : ''}}">
+    <view class="page-header">
+        <rich-text>
+            <h3>2020国家职业资格证书</h3>
+            <h1>报名考试培训平台</h1>
+            <p>
+              <span><image src="/statics/images/icon_t.png"></image>名师授课</span>
+              <span><image src="/statics/images/icon_t.png"></image>定制专属学习方案</span>
+              <span><image src="/statics/images/icon_t.png"></image>续学保障</span>
+            </p>
+        </rich-text>
+    </view>
+    <view class="page-section">
+        <text class="Title">免费领取职业提升大礼包</text>
+        <view class="formBlock">
+            <form bindsubmit="formSubmit" bindreset="formReset">
+                <view class="section">
+                    <view class="section__title">姓名（必填）</view>
+                    <input class="section__input" bindinput="nameInput" value="{{customName}}" name="username" placeholder="请输入您的姓名"/>
+                </view>
+                <view class="section">
+                    <view class="section__title">电话（必填）</view>
+                    <input class="section__input" bindinput="namePhone" value="{{customPhone}}" name="phone" placeholder="请输入联系方式" />
+                </view>
+                <view class="section">
+                    <view class="section__title">项目（必填）</view>
+                    <input class="section__input" bindinput="nameMarks" value="{{customMarks}}" name="marks" placeholder="请输入要咨询的项目" />
+                </view>
+                <!-- <view class="section">
+                    <view class="section__title">指导老师（必填）</view>
+                    <input class="section__input" name="teacher" placeholder="请输入指导老师信息" />
+                </view> -->
+                <view class="none">
+                    <input type="hidden" name="channel" value="1" />
+                </view>
+                <view class="btn-area">
+                    <button class="submitBtn" bind:tap="formSubmit">提交</button>
+                    <button class="UserInfoBtn" wx:if="{{!userInfo.nickname}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+                </view>
+            </form>
+            <text class="c">温馨提示：提交后老师会第一时间与您联系</text>
+            <!--<view wx:if="{{isSubmit}}">
+                {{warn ? warn : "姓名："+ username+"，手机号："+ phone+"，备注："+ marks}}
+            </view>-->
+        </view>
+
+    </view>
+</view>
+<!-- <include src="/pages/weChat.wxml"/> -->

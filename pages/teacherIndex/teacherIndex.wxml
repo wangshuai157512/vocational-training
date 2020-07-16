@@ -1,0 +1,16 @@
+<view class="modal" wx:if="{{isModal}}" bind:tap="closeModal">
+    <view class="phone">
+        <view class="phoneTitle">为了同步您的查看权限，请先登录</view>
+        <view class="phoneImg"><image class="" src="../../statics/images/phone.png" mode="widthFix"></image></view>
+        <view class="phoneBtn"><button class="" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">一键登录</button></view>
+    </view>
+</view>
+<view class="teaBody">
+    <view class="zyIcon"><image class="" src="../../statics/images/icon-z.png" mode="widthFix"></image></view>
+    <view class="zyCourse">职业培训课</view>
+    <view class="ztBtn">
+        <button bind:tap="teacherName">点击授权</button>
+        <button class="" wx:if="{{!userInfo.nickname}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+        <button class="" wx:if="{{userInfo.nickname && !userInfo.phone}}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"></button>
+    </view>
+</view>

@@ -1,0 +1,19 @@
+ <view class="materialsBody" wx:if="{{materialList.length>0}}">
+    <view class="materialsList" wx:for="{{materialList}}" wx:key="index" bind:tap="handleMaterials" data-classId="{{item.classId}}">
+        <view class="materialsListLeft"><image class="" src="{{normalUrl}}{{item.materialImg}}" mode="widthFix"></image></view>
+        <view class="materialsListRight">
+            <view>
+                <view>{{item.materialName}}</view>
+                <view class="introduction">{{item.materialIntroduction}}</view>
+            </view>
+            <view><text class="tag" wx:for="{{materialList[index].materialTag}}" wx:key="index">{{item}}</text></view>
+        </view>
+    </view>
+    
+</view>
+<emptyPage wx:else 
+        img="../../statics/images/no-materials.png"
+        title="暂无相关资料，"
+        description="赶紧前往免费领资料哦~"
+        >
+</emptyPage>

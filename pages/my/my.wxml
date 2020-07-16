@@ -1,0 +1,34 @@
+<view class="my_body">
+    <view class="my_bg"><image src="../../statics/images/my-bg.png" mode="widthFix"></image></view>
+    <view class="my_photo">
+        <view class="my_photo_img" wx:if="{{!userInfo.avatarUrl}}"><image  src="../../statics/images/photo.png" mode="widthFix"></image><button class="avatarUrlBtn" wx:if="{{!userInfo.nickname}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" ></button></view>
+        <view class="my_photo_img" wx:else><image src="{{userInfo.avatarUrl}}" mode="widthFix"></image></view>
+        <view class="my_photo-btn" wx:if="{{userInfo.nickname}}">{{userInfo.nickname}}</view>
+        <view wx:else class="my_photo-btn"><button class="" wx:if="{{!userInfo.nickname}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" >请登录</button></view>
+    </view>
+    <view class="my-content">
+        <view>
+            <view><image src="../../statics/images/my-materials.png" mode="widthFix"></image><text>我的资料包</text></view>
+            <view class="arrow"><image src="../../statics/images/right-arrow.png" mode="widthFix"></image></view>
+            <button class="" bindtap="myMaterials"></button>
+            <button class="" wx:if="{{!userInfo.nickname}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" ></button>
+        </view>
+        <view style="margin:63rpx 0">     
+            <view><image src="../../statics/images/my-squad.png" mode="widthFix"></image><text>我的拼团</text></view>
+            <view class="arrow"><image src="../../statics/images/right-arrow.png" mode="widthFix"></image></view>
+            <button class="" bindtap="myGroup"></button>
+            <button class="" wx:if="{{!userInfo.nickname}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" ></button>
+        </view>
+        <view style="margin:63rpx 0" wx:if="{{userInfo.teacherName}}">
+            <view><image src="../../statics/images/my-share.png" mode="widthFix"></image><text>我的邀请</text></view>
+            <view class="arrow"><image src="../../statics/images/right-arrow.png" mode="widthFix"></image></view>
+            <button class="" bindtap="myShare"></button>
+            <button class="" wx:if="{{!userInfo.nickname}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" ></button>
+        </view>
+        <view class="contact">
+            <view><image src="../../statics/images/we-chat.png" mode="widthFix"></image><text>我的客服</text></view>
+            <view class="arrow"><image src="../../statics/images/right-arrow.png" mode="widthFix"></image></view>
+            <button open-type='contact'></button>
+        </view>
+    </view>
+</view>

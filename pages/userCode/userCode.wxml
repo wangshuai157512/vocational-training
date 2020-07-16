@@ -1,0 +1,14 @@
+<!--项目详情-->
+<view class="code_body">
+    <canvas canvas-id="myCanvas"/>
+    <view wx:if="{{isShow}}">
+        <view class="savePhoto" bindtap="savePhoto">
+            点击保存图片
+        </view>
+        <image class="bottomImg" src="../../statics/images/icon-down.png" mode="widthFix"></image>
+    </view>
+</view>
+
+
+<!-- <include src="/pages/weChat.wxml"/>
+<tabbar ></tabbar> -->

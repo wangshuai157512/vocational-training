@@ -1,0 +1,16 @@
+<!--custom-tab-bar/index.wxml-->
+<view class="tab-bar {{isIpx ? 'ipx_button' : ''}}">
+  <view class="tab-bar-border"></view>
+    <view class="btn_link">
+        <view class="btn_child">
+            <button open-type='contact' bindcontact="handleContact">我要咨询</button>
+            <image src="/statics/images/icon_wchat.png"></image>我要咨询
+        </view>
+        <view class="btn_child">
+            <!--<button wx:if="{{!userInfo.phone}}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" >授权手机号</button>-->
+            <view bind:tap="switchTab">
+                <image src="/statics/images/icon_apply.png"></image>我要报名
+            </view>
+        </view>
+    </view>
+</view>

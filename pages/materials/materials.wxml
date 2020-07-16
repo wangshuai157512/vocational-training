@@ -1,0 +1,17 @@
+ <view class="materialsBody">
+    <view class="materialsBg"><image src="../../statics/images/materials-bg.png" mode="widthFix"></image></view>
+    <view class="materials">
+        <view class="materialsList" wx:for="{{materialList}}" wx:key="index" bind:tap="handleMaterials" data-classId="{{item.id}}">
+            <view class="materialsListLeft"><image class="" src="{{normalUrl}}{{item.materialImg}}" mode="aspectFill"></image></view>
+            <view class="materialsListRight">
+                <view>
+                    <view>{{item.materialName}}</view>
+                    <view class="introduction">{{item.materialIntroduction}}</view>
+                </view>
+                <view><text class="tag" wx:for="{{materialList[index].tag}}" wx:key="index">{{item}}</text></view>
+            </view>
+        </view>
+    </view>
+    
+</view>
+<include src="/pages/weChat.wxml"/>
